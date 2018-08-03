@@ -1,0 +1,6 @@
+<view>
+<view>
+<text>{{time}}</text>
+
+</view>
+</view>

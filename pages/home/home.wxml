@@ -1,0 +1,6 @@
+<view class="content" >
+ <view class='imgback'>
+ <image class='image1' src="{{imagetopUrl}}" mode='aspectFit'></image>
+ <image class='image1' src="{{imagebottomUrl}}" mode='aspectFit' bindtap='jumpview'></image>
+ </view>
+</view>

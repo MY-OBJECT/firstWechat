@@ -1,0 +1,38 @@
+page{
+   height: 100%;
+   width: 100%;
+}
+
+.toptype {
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+}
+
+.imgback{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #FED300;
+}
+.image1{
+ align-content: center;
+ background-color: #FED300;
+ background-size: cover;
+ background-repeat: round;
+}
+.text2{
+  font-size: 12sp;
+  color: #000;
+}
+.bottom{
+  padding: 10px;
+}
+

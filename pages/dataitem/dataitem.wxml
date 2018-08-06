@@ -1,6 +1,12 @@
-<view>
-<view>
-<text>{{time}}</text>
-
-</view>
+<view class='view0'>
+  <view class='view1'>
+    <text>{{time}}</text>
+    <view class='roundbtnstyle' bindtap='backto'>
+      <text class='btntext'>保存</text>
+    </view>
+  </view>
+  <view class='view0'>
+    <input class='input' placeholder='请输入标题' bindinput='titleinput'></input>
+    <input class='input' placeholder='请输入内容' bindinput='contentinput'></input>
+  </view>
 </view>

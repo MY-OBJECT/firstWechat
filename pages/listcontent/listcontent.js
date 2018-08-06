@@ -1,23 +1,28 @@
 const app = getApp();
 
 Page({
-  data:{
-      imagurltop:'',
-      userinfo:{},
-      datalist:[],
-      imageadd:'http://111.230.253.46/mgd/plus_sign.png',
-      iamgeempty:'http://111.230.253.46/mgd/no_data.png',
-      canIUse: wx.canIUse('button.open-type.getUserInfo')
+  data: {
+    imagurltop: '',
+    userinfo: {},
+    datalist: [],
+    item: {
+      obj_time:'',
+      obj_title: '',
+      obj_content: '',
+    },
+    imageadd: 'http://111.230.253.46/mgd/plus_sign.png',
+    iamgeempty: 'http://111.230.253.46/mgd/no_data.png',
+    canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
 
 
-  tonewBuild:function(){
-      wx.navigateTo({
-        url: '../dataitem/dataitem',
-      })
+  tonewBuild: function() {
+    wx.navigateTo({
+      url: '../dataitem/dataitem',
+    })
   },
-  onLoad: function () {
-
+  onLoad: function(option) {
+    
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -44,8 +49,15 @@ Page({
         }
       })
     }
+
+    this.setData({
+      [obj_title]: option.title,
+      [obj_content]: option.content,
+
+    })
+    console.log(item.toString)
   },
-  getUserInfo: function (e) {
+  getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({

@@ -38,7 +38,7 @@ page{
 }
 .roundbtn{
   display: flex;
-  border-radius: 15%;
+  border-radius: 20rpx;
   width: 340rpx;
   height: 90rpx;
   flex-direction: row;

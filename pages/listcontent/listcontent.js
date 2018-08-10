@@ -1,14 +1,14 @@
 const app = getApp();
-
+var list = new Array();
 Page({
   data: {
     imagurltop: '',
     userinfo: {},
     datalist: [],
-    item: {
-      obj_time:'',
-      obj_title: '',
-      obj_content: '',
+    obj:{
+      time:'',
+      title:'',
+      content:'',
     },
     imageadd: 'http://111.230.253.46/mgd/plus_sign.png',
     iamgeempty: 'http://111.230.253.46/mgd/no_data.png',
@@ -51,11 +51,17 @@ Page({
     }
 
     this.setData({
-      [obj_title]: option.title,
-      [obj_content]: option.content,
-
+      title: option.title,
+      content: option.content,
+      time:option.time,
+      
     })
-    console.log(item.toString)
+    list.push(obj);
+    console.log(this.data.obj_title);
+    console.log(this.data.obj_content);
+    console.log(list.length);
+
+
   },
   getUserInfo: function(e) {
     console.log(e)

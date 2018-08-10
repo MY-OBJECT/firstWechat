@@ -9,16 +9,16 @@ Page({
   },
 
   backto: function() {
-    console.log("title：" + this.data.title + "content:" + this.data.content)
+    // console.log("title：" + this.data.title + "content:" + this.data.content)
 
     wx.navigateTo({
-      url: '../listcontent/listcontent?title=' + this.data.title + '&content=' + this.data.content,
+      url: '../listcontent/listcontent?title=' + this.data.title + '&content=' + this.data.content+'&time='+this.data.time,
     })
   },
 
   onLoad: function() {
     var time = utils.formatTime(new Date());
-    console.log(time);
+    // console.log(time);
     this.setData({
       time: time
     });
